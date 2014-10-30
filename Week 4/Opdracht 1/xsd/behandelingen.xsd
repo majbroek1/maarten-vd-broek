@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="behandelingen">
+		<xs:complexType>
+			<xs:sequence>		
+				<xs:element name="behandeling"  maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="status"/>
+							<xs:element name="behandelCode" type="xs:string"/>
+							<xs:element name="klantBsn" type="xs:string"/>
+						</xs:sequence>						
+						<xs:attribute name="id" type="xs:integer"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

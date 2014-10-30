@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	targetNamespace="http://Verzekeringen" 
+	xmlns="http://Verzekeringen" 
+	xmlns:verzekeringen="http://Verzekeringen" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="Klant">
+		<xs:all>
+			<xs:element name="BSN" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Voorletters" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Voornaam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Tussenvoegsels" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Achternaam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Straatnaam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Huisnummer" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Postcode" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Woonplaats" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="GebDatum" type="xs:date" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="TelefoonNr" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="MailFactuur" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_diagnoses" type="verzekeringen:Diagnose" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="_polis" type="verzekeringen:Verzekeringspolis" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_sessies" type="verzekeringen:Sessie" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Verzekeringsmaatschappij">
+		<xs:all>
+			<xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Naam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Adres" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Postcode" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Plaats" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Emai" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Telefoon" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_polissen" type="verzekeringen:Verzekeringspolis" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Verzekeringspolis">
+		<xs:all>
+			<xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="StartDatum" type="xs:date" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="EindDatum" type="xs:date" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Betalingsmethode" type="enum" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="IBAN" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Begunstigde" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="EigenRisico" type="xs:double" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_klant" type="verzekeringen:Klant" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_polissen" type="verzekeringen:Verzekeringstype" minOccurs="1" maxOccurs="25">
+			</xs:element>
+			<xs:element name="_maatschappij" type="verzekeringen:Verzekeringsmaatschappij" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_facturen" type="verzekeringen:Factuur" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Behandeling">
+		<xs:all>
+			<xs:element name="Code" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Naam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Tarief" type="xs:double" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_verzekeringstypen" type="verzekeringen:Verzekeringstype" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="_sessies" type="verzekeringen:Sessie" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Diagnose">
+		<xs:all>
+			<xs:element name="Code" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Beschrijving" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_klant" type="verzekeringen:Klant" minOccurs="1" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Zorgaanbieder">
+		<xs:all>
+			<xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Naam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Adres" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Postcode" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Plaats" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Telefoon" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Email" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_behandelingen" type="verzekeringen:Sessie" minOccurs="1" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Factuur">
+		<xs:all>
+			<xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Datum" type="datetime" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Document" type="pdf" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Totaalprijs" type="xs:double" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Voldaan" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_polis" type="verzekeringen:Verzekeringspolis" minOccurs="1" maxOccurs="1">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Verzekeringstype">
+		<xs:all>
+			<xs:element name="Code" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Naam" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Beschrijving" type="xs:string" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Basistarief" type="xs:double" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_verzekeringstypen" type="verzekeringen:Verzekeringspolis" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="_behandelingen" type="verzekeringen:Behandeling" minOccurs="1" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Sessie">
+		<xs:all>
+			<xs:element name="Id" type="xs:int" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Datum" type="datetime" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Voldaan" type="xs:boolean" minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_klant" type="verzekeringen:Klant" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_zorgaanbieder" type="verzekeringen:Zorgaanbieder" minOccurs="1" maxOccurs="1">
+			</xs:element>
+			<xs:element name="_behandelingen" type="verzekeringen:Behandeling" minOccurs="1" maxOccurs="unbounded">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

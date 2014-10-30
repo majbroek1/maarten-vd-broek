@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<behandelingen>
+	<behandeling id="1">
+		<status>stat1</status>
+		<behandelCode>1</behandelCode>
+		<klantBsn>1</klantBsn>
+	</behandeling>
+	<behandeling id="2">
+		<status>stat2</status>
+		<behandelCode>1</behandelCode>
+		<klantBsn>2</klantBsn>
+	</behandeling>
+	<behandeling id="3">
+		<status>stat3</status>
+		<behandelCode>1</behandelCode>
+		<klantBsn>1</klantBsn>
+	</behandeling>
+</behandelingen>

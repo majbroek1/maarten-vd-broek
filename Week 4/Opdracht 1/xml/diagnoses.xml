@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<diagnoses>
+	<diagnose code="1">
+		<omschrijving>Hoop tekst</omschrijving>
+		<klantBsn>1</klantBsn>
+	</diagnose>
+	<diagnose code="2">
+		<omschrijving>Hoop tekst</omschrijving>
+		<klantBsn>1</klantBsn>
+	</diagnose>
+	<diagnose code="3">
+		<omschrijving>Hoop tekst</omschrijving>	
+		<klantBsn>2</klantBsn>
+	</diagnose>
+</diagnoses>

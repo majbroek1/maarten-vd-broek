@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<praktijken>
+	<praktijk id="1">
+		<naam>Praktijk 1</naam>
+		<adres>Scholtenstraat 13</adres>
+		<postcode>8256AD</postcode>
+		<plaats>Haarlem</plaats>
+		<iban>13ING000376271752</iban>
+		<telnr>0739564712</telnr>
+		<email>bla@blabla.nl</email>
+		<website>bla.nl</website>
+	</praktijk>
+	<praktijk id="2">
+		<naam>Praktijk 1</naam>
+		<adres>Scholtenstraat 13</adres>
+		<postcode>8256AD</postcode>
+		<plaats>Haarlem</plaats>
+		<iban>13ING000376271752</iban>
+		<telnr>0739564712</telnr>
+		<email>bla@blabla.nl</email>
+		<website>bla.nl</website>
+	</praktijk>
+	<praktijk id="2">
+		<naam>Praktijk 1</naam>
+		<adres>Scholtenstraat 13</adres>
+		<postcode>8256AD</postcode>
+		<plaats>Haarlem</plaats>
+		<iban>13ING000376271752</iban>
+		<telnr>0739564712</telnr>
+		<email>bla@blabla.nl</email>
+		<website>bla.nl</website>
+	</praktijk>
+</praktijken>

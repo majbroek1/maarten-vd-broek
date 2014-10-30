@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="medewerkers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="medewerker" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="naam"/>
+							<xs:element type="xs:string" name="wachtwoord"/>
+							<xs:element type="xs:string" name="status"/>
+							<xs:element type="xs:string" name="functie"/>
+						</xs:sequence>							
+					<xs:attribute type="xs:byte" name="id"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

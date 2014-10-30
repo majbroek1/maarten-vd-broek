@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behandelCodes>
+	<behandelCode code="1">
+		<behandelingNaam>Achillespeesblessure</behandelingNaam>
+		<aantalSessies>19</aantalSessies>
+		<sessieDuur>10.00</sessieDuur>
+		<tariefBehandeling>300.00</tariefBehandeling>
+	</behandelCode>
+	<behandelCode code="2">
+		<behandelingNaam>Artrose</behandelingNaam>
+		<aantalSessies>19</aantalSessies>
+		<sessieDuur>10.00</sessieDuur>
+		<tariefBehandeling>300.00</tariefBehandeling>
+	</behandelCode>
+	<behandelCode code="3">
+		<behandelingNaam>Bekkenbodem problematiek</behandelingNaam>
+		<aantalSessies>19</aantalSessies>
+		<sessieDuur>10.00</sessieDuur>
+		<tariefBehandeling>300.00</tariefBehandeling>
+	</behandelCode>
+</behandelCodes>

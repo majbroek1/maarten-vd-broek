@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roosters>
+	<rooster id="1">
+		<start>2014-10-30T09:30:10.5</start>
+		<eind>2014-10-30T10:30:10.5</eind>
+		<fysioId>1</fysioId>
+	</rooster>
+	<rooster id="2">
+		<start>2014-11-30T09:30:10.5</start>
+		<eind>2014-11-30T10:30:10.5</eind>
+		<fysioId>1</fysioId>
+	</rooster>
+	<rooster id="3">
+		<start>2014-10-28T09:30:10.5</start>
+		<eind>2014-10-28T10:30:10.5</eind>
+		<fysioId>1</fysioId>
+	</rooster>
+</roosters>

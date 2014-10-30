@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><medewerkers><medewerker id="1"><naam>Mark</naam><wachtwoord>Test</wachtwoord><status>ACTIEF</status><functie>secretaresse</functie></medewerker><medewerker id="2"><naam>Bob</naam><wachtwoord>2</wachtwoord><status>INACTIEF</status><functie>secretaresse</functie></medewerker></medewerkers>

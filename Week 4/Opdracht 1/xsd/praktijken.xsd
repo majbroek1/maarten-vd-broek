@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="praktijken">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="praktijk" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="naam" type="xs:string"/>
+							<xs:element name="adres" type="xs:string"/>
+							<xs:element name="postcode" type="xs:string"/>
+							<xs:element name="plaats" type="xs:string"/>
+							<xs:element name="iban" type="xs:string"/>
+							<xs:element name="telnr" type="xs:string"/>
+							<xs:element name="email" type="xs:string"/>
+							<xs:element name="website" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:integer"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
